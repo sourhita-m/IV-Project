@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "stroke": null}, "facet": {"spacing": 0}}, "data": {"values": [{"Country": "Azerbaijan", "Year": 2009, "CSD": 586000}, {"Country": "Azerbaijan", "Year": 2010, "CSD": 593000}, {"Country": "Azerbaijan", "Year": 2011, "CSD": 599000}, {"Country": "Azerbaijan", "Year": 2012, "CSD": 600000}, {"Country": "Azerbaijan", "Year": 2013, "CSD": 543000}, {"Country": "Azerbaijan", "Year": 2014, "CSD": 569000}, {"Country": "Azerbaijan", "Year": 2015, "CSD": 564000}, {"Country": "Azerbaijan", "Year": 2016, "CSD": 582000}, {"Country": "Azerbaijan", "Year": 2017, "CSD": 393000}, {"Country": "Azerbaijan", "Year": 2018, "CSD": 344000}, {"Country": "Bosnia and Herzegovina", "Year": 2009, "CSD": 114000}, {"Country": "Bosnia and Herzegovina", "Year": 2010, "CSD": 113000}, {"Country": "Bosnia and Herzegovina", "Year": 2011, "CSD": 113000}, {"Country": "Bosnia and Herzegovina", "Year": 2012, "CSD": 103000}, {"Country": "Bosnia and Herzegovina", "Year": 2013, "CSD": 103000}, {"Country": "Bosnia and Herzegovina", "Year": 2014, "CSD": 100000}, {"Country": "Bosnia and Herzegovina", "Year": 2015, "CSD": 98000}, {"Country": "Bosnia and Herzegovina", "Year": 2016, "CSD": 98000}, {"Country": "Bosnia and Herzegovina", "Year": 2017, "CSD": 99000}, {"Country": "Bosnia and Herzegovina", "Year": 2018, "CSD": 99000}, {"Country": "Cyprus", "Year": 2009, "CSD": 201000}, {"Country": "Cyprus", "Year": 2010, "CSD": 208000}, {"Country": "Cyprus", "Year": 2011, "CSD": 208000}, {"Country": "Cyprus", "Year": 2012, "CSD": 210000}, {"Country": "Cyprus", "Year": 2013, "CSD": 212000}, {"Country": "Cyprus", "Year": 2014, "CSD": 212000}, {"Country": "Cyprus", "Year": 2015, "CSD": 272000}, {"Country": "Cyprus", "Year": 2016, "CSD": 272000}, {"Country": "Cyprus", "Year": 2017, "CSD": 217000}, {"Country": "Cyprus", "Year": 2018, "CSD": 228000}, {"Country": "Russian Federation", "Year": 2009, "CSD": 80000}, {"Country": "Russian Federation", "Year": 2010, "CSD": 78000}, {"Country": "Russian Federation", "Year": 2012, "CSD": 29000}, {"Country": "Russian Federation", "Year": 2013, "CSD": 35000}, {"Country": "Russian Federation", "Year": 2014, "CSD": 25000}, {"Country": "Russian Federation", "Year": 2015, "CSD": 27000}, {"Country": "Russian Federation", "Year": 2016, "CSD": 19000}, {"Country": "Russian Federation", "Year": 2017, "CSD": 19000}, {"Country": "Russian Federation", "Year": 2018, "CSD": 2300}, {"Country": "Serbia", "Year": 2009, "CSD": 225000}, {"Country": "Serbia", "Year": 2010, "CSD": 225000}, {"Country": "Serbia", "Year": 2011, "CSD": 225000}, {"Country": "Serbia", "Year": 2012, "CSD": 225000}, {"Country": "Serbia", "Year": 2013, "CSD": 97000}, {"Country": "Serbia", "Year": 2014, "CSD": 97000}, {"Country": "Turkey", "Year": 2009, "CSD": 1000000}, {"Country": "Turkey", "Year": 2010, "CSD": 1000000}, {"Country": "Turkey", "Year": 2011, "CSD": 1000000}, {"Country": "Turkey", "Year": 2012, "CSD": 1000000}, {"Country": "Turkey", "Year": 2013, "CSD": 954000}, {"Country": "Turkey", "Year": 2014, "CSD": 954000}, {"Country": "Turkey", "Year": 2015, "CSD": 954000}, {"Country": "Turkey", "Year": 2016, "CSD": 1108000}, {"Country": "Turkey", "Year": 2017, "CSD": 1113000}, {"Country": "Turkey", "Year": 2018, "CSD": 1097000}, {"Country": "Ukraine", "Year": 2014, "CSD": 647000}, {"Country": "Ukraine", "Year": 2015, "CSD": 1679000}, {"Country": "Ukraine", "Year": 2016, "CSD": 1653000}, {"Country": "Ukraine", "Year": 2017, "CSD": 800000}, {"Country": "Ukraine", "Year": 2018, "CSD": 800000}, {"Country": "Kosovo", "Year": 2009, "CSD": 20000}, {"Country": "Kosovo", "Year": 2010, "CSD": 18000}, {"Country": "Kosovo", "Year": 2011, "CSD": 18000}, {"Country": "Kosovo", "Year": 2012, "CSD": 18000}, {"Country": "Kosovo", "Year": 2013, "CSD": 17000}, {"Country": "Kosovo", "Year": 2014, "CSD": 17000}, {"Country": "Kosovo", "Year": 2015, "CSD": 17000}, {"Country": "Kosovo", "Year": 2016, "CSD": 17000}, {"Country": "Kosovo", "Year": 2017, "CSD": 16000}, {"Country": "Kosovo", "Year": 2018, "CSD": 16000}]}, "mark": {"type": "bar", "size": 15}, "encoding": {"color": {"type": "nominal", "field": "Country", "legend": null}, "column": {"type": "nominal", "field": "Country", "header": {"labelAlign": "right", "labelAngle": -90, "labelOrient": "bottom", "labelPadding": 3, "titleOrient": "top"}}, "tooltip": [{"type": "ordinal", "field": "Year", "title": "Year"}, {"type": "quantitative", "field": "CSD", "title": "No. of Displacement"}], "x": {"type": "quantitative", "axis": {"grid": false, "labels": false, "ticks": true, "values": [0]}, "field": "jitter", "scale": {}, "title": null}, "y": {"type": "quantitative", "field": "CSD"}}, "height": 300, "title": "Conflict Stock Displacement in European Countries", "transform": [{"calculate": "sqrt(-2*log(random()))*cos(2*PI*random())", "as": "jitter"}], "width": 300, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
